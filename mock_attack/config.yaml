@@ -1,0 +1,22 @@
+# config.yaml
+agent:
+  name: "VulnerableBusinessAgent"
+  version: "1.0-attack"
+
+email:
+  mock_mode: true
+  from_address: "agent@company.com"
+
+documents:
+  storage_path: "./documents"
+  mock_mode: true
+
+logging:
+  level: "INFO"
+  security_log: "./logs/security.log"
+
+# Test email addresses
+test_contacts:
+  boss: "boss@company.com"
+  vendor: "vendor@supplier.com"
+  attacker: "attacker@malicious.com"
