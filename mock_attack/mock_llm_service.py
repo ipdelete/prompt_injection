@@ -6,15 +6,15 @@ class MockLLMService:
     
     def __init__(self):
         self.response_patterns = [
-            # Normal summarize and email pattern
-            {
-                'trigger': r'summarize.*email.*boss',
-                'response_template': self._summarize_and_email_boss
-            },
             # Vendor document with hidden injection pattern  
             {
                 'trigger': r'vendor.*document',
                 'response_template': self._process_vendor_document
+            },
+            # Normal summarize and email pattern
+            {
+                'trigger': r'summarize.*email.*boss',
+                'response_template': self._summarize_and_email_boss
             },
             # Direct email request pattern
             {

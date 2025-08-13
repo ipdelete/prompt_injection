@@ -1,5 +1,5 @@
 from typing import Dict
-import datetime
+from datetime import datetime, timezone
 import logging
 import json
 
@@ -67,7 +67,7 @@ class DocumentTool:
             logging.getLogger('security').info(json.dumps({
                 'event': 'document_access',
                 'document': doc_name,
-                'timestamp': datetime.utcnow().isoformat()
+                'timestamp': datetime.now(timezone.utc).isoformat()
             }))
             
             return content
